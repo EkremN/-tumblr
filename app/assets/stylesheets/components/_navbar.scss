@@ -1,12 +1,185 @@
-.navbar-lewagon {
+body {
+  font: 16px/26px 'Roboto';
+}
+i {
+  text-decoration: none;
+  font-family: 'Roboto';
+}
+.navBar {
+  position: absolute;
+  background-color: #5d99d1;
+  top: 0;
+  min-height: 100vh;
+  width: 50px;
+  overflow: hidden;
+  transition: all 100ms ease-in-out 0.2s;
+}
+.navBar:hover {
+  width: 165px;
+  background-color: #3273b0;
+  box-shadow: 0 0 18px rgba(51,51,51,0.7);
+}
+.navBar:hover a span {
+  color: #fff;
+}
+.navBar nav.nav {
+  margin-top: 80px;
+  margin-right: 10px;
+}
+.navBar nav.nav .nav__element {
+  position: relative;
+}
+.navBar nav.nav .nav__element:hover:before,
+.navBar nav.nav .nav__element.active:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-color: #fff;
+  width: 3px;
+}
+.navBar nav.nav .nav__element i {
+  white-space: nowrap;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 0;
+}
+.navBar nav.nav .nav__element i span {
+  font-family: 'Roboto';
+}
+.navBar nav.nav .nav__element i::before {
+  display: inline-block;
+  font-size: 1.1rem;
+  width: 50px;
+  text-align: center;
+  margin-right: 5px;
+  position: relative;
+}
+.dashboard {
+  margin-top: 0;
+  margin-left: 50px;
+  min-height: 100vh;
+}
+.dashboard h2,
+.dashboard h3 {
+  margin: 0;
+}
+.dashboard__notification {
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  background: white;
+  color: #6f6f6f;
+  box-shadow: 0 0 5px rgba(153,153,153,0.4);
+}
+.dashboard__notification h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0 20px;
+}
+.dashboard__notification form {
+  flex-grow: 1;
+  position: relative;
+}
+.dashboard__notification form:before {
+  position: absolute;
+  font-size: 0.7rem;
+  left: 6px;
+  top: 2px;
+  font-family: 'FontAwesome';
+  content: '\f002';
+  display: block;
+  color: #999;
+}
+.dashboard__notification form input[type='text'] {
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  font-size: 0.7rem;
+  line-height: 1.2rem;
+  outline: none;
+  padding-right: 3px;
+  padding-left: 23px;
+}
+.dashboard__notification .usermenu {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 0.8rem;
+}
+.dashboard__notification .usermenu .avatar {
+  position: relative;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/204465/profile/profile-80.jpg");
+  background-size: cover;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-left: 6px;
+  border-radius: 100%;
+}
+.dashboard__notification .usermenu .avatar span.notification {
+  position: absolute;
+  background-color: #ed5830;
+  padding: 2px 4px;
+  color: #fff;
+  font-size: 0.6rem;
+  line-height: 0.7rem;
+  border-radius: 3px;
+  top: -7px;
+  right: -7px;
+}
+.dashboard__notification .usermenu .dropdown {
+  position: relative;
+}
+.dashboard__notification .usermenu .dropdown:hover nav {
+  visibility: visible;
+}
+.dashboard__notification .usermenu .dropdown nav {
+  visibility: hidden;
+  position: absolute;
+  background-color: #ed5830;
+  width: 170px;
+  right: 0;
+  transition: visibility 100s ease-in;
+  box-shadow: 1px 1px 4px rgba(153,153,153,0.4), -1px 1px 11px rgba(153,153,153,0.6);
+}
+.dashboard__notification .usermenu .dropdown nav ul {
+  list-style: none;
+  padding: 12px 0;
+  margin: 0 20px;
+}
+.dashboard__notification .usermenu .dropdown nav ul i {
+  color: #fff;
+}
+.dashboard__content {
+  padding: 1rem 0.6rem 0 3rem;
+  min-height: calc( 100vh - 60px );
+  color: #606060;
+}
+.dashboard__content h2.title {
+  font-weight: normal;
+  font-size: 1.7rem;
+  margin-top: 10px;
+}
+.dashboard__content ul.breadcrumb {
+  margin: 10px 0;
+  padding: 0;
+  font-size: 1rem;
+  color: #a0a0a0;
+  font-weight: bold;
+}
+.dashboard__content ul.breadcrumb li {
+  display: inline-block;
+  letter-spacing: 2px;
+}
+.dashboard__content ul.breadcrumb li:not(:last-child):after {
+  content: '»';
+  margin: 0 3px 0 7px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.words {
+  font-size: 18px;
+  margin-top: 5px;
 }

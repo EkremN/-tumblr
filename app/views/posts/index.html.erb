@@ -1,1 +1,9 @@
-<h1>Hello</h1>
+<div class="dashboard">
+ <div class="dashboard__content">
+    <% @posts.each do |post| %>
+      <h2 class="title"><%= link_to post.title, post%> </h2>
+      <p class="words"><%= truncate(post.body, length:300) %></p>
+        <p><%= time_ago_in_words(post.created_at)%></p>
+    <% end %>
+  </div>
+</div>
