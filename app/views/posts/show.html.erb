@@ -7,4 +7,11 @@
       <%= link_to 'Edit', edit_post_path(@post) %> |
       <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" } %>
   </div>
+
+  <div class="comment">
+  <h5><%= @post.comments.count %> Comments </h5>
+  <%= render @post.comments %>
+  <h6>Join Discusion</h6>
+  <%= render "comments/form" %>
+</div>
 </div>
