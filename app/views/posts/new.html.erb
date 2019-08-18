@@ -1,5 +1,16 @@
 
   <%= simple_form_for @post do |f| %>
+    <% if @post.errors.any? %>
+      <div class="errors">
+        <h2> <%= pluralize(@post.errors.count, "error") %> stoped this post from saving </h2>
+        <ul>
+          <% @post.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+          <% end %>
+
+        </ul>
+    <% end %>
+
     <h1>Create Blog Post</h1>
     <!-- [...] -->
     <%= f.input :title%>
