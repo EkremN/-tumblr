@@ -5,7 +5,7 @@
         <nav>
           <ul>
             <li> <a href="">Change Password</a></li>
-            <li> <a href="">Logout</a></li>
+            <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
           </ul>
         </nav></span>
 </div>
@@ -15,7 +15,7 @@
         <div class="nav__element active">
         <div class="nav__element"><i class="fas fa-plus-square"><span><%= link_to 'Post', new_post_path %></span></i></div>
         <div class="nav__element"><i class="fa fa-credit-card"><span><%= link_to 'About', about_path %></span></i></div>
-        <div class="nav__element"><i class="fa fa-cog"> <span><%= link_to 'Log in', new_post_path %></span></i></div>
+        <div class="nav__element"><i class="fa fa-cog"> <span><%= link_to 'Log In',  user_session_path %></span></i></div>
       </nav>
     </div>
 
